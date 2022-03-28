@@ -63,18 +63,18 @@ export default function Table() {
         aria-describedby="modal-modal-description"
     >
         <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="span">
+            <Typography id="modal-modal-title" variant="h6" component="div">
                 Movie details
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                <div>
-                    <p>ID: {modalPayload.id}</p>
-                    <p>TITLE: {modalPayload.attributes.title}</p>
-                    <p>AUTHOR: {modalPayload.attributes.author}</p>
-                    <p>DESCRIPTION: {modalPayload.attributes.description}</p>
-                    <p>AVAILABLE: {modalPayload.attributes.available.toString()}</p>
-                    <p>YEAR: {modalPayload.attributes.year}</p>
-                </div>
+                 <>
+                    <span>ID: {modalPayload.id}</span><br />
+                    <span>TITLE: {modalPayload.attributes.title}</span><br />
+                    <span>AUTHOR: {modalPayload.attributes.author}</span><br />
+                    <span>DESCRIPTION: {modalPayload.attributes.description}</span><br />
+                    <span>AVAILABLE: {modalPayload.attributes.available.toString()}</span><br />
+                    <span>YEAR: {modalPayload.attributes.year}</span><br />
+                 </>
             </Typography>
         </Box>
     </Modal>
